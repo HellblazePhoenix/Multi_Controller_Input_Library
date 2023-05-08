@@ -129,7 +129,7 @@ void ApplicationHarness::Update(float delta)
 	aspectRatio = width / (float)height;
 
 	glm::mat4 deprojection = glm::inverse(GetCameraTransform());
-	double cursorX, cursorY;
+	/*double cursorX, cursorY;
 	glfwGetCursorPos(window, &cursorX, &cursorY);
 	cursorX = (cursorX / width) * 2.0 - 1.0;
 	cursorY = -((cursorY / height) * 2.0 - 1.0);
@@ -160,7 +160,7 @@ void ApplicationHarness::Update(float delta)
 
 	app->leftMouseDown = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;
 	app->rightMouseDown = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_PRESS;
-
+*/
 	lines.Clear();
 
 	ImGui_ImplOpenGL3_NewFrame();

@@ -41,10 +41,7 @@
       <Filter>ThirdParty\imgui</Filter>
     </ClCompile>
     <ClCompile Include="EntryPoint.cpp" />
-    <ClCompile Include="Example.cpp">
-      <Filter>Game\Examples</Filter>
-    </ClCompile>
-    <ClCompile Include="DotClicker.cpp">
+    <ClCompile Include="InputManagerDemo.cpp">
       <Filter>Game\Examples</Filter>
     </ClCompile>
   </ItemGroup>
@@ -105,12 +102,6 @@
     </ClInclude>
     <ClInclude Include="..\imgui\imstb_truetype.h">
       <Filter>ThirdParty\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="Example.h">
-      <Filter>Game\Examples</Filter>
-    </ClInclude>
-    <ClInclude Include="DotClicker.h">
-      <Filter>Game\Examples</Filter>
     </ClInclude>
     <ClInclude Include="Application.h">
       <Filter>Engine</Filter>
