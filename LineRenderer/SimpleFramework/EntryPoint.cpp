@@ -7,6 +7,8 @@
 
 int main()
 {
+	
+	
 	ApplicationHarness program(new InputManagerDemo());	//Create a new instance of your application type to pass into the harness here.
 
 	program.Run();

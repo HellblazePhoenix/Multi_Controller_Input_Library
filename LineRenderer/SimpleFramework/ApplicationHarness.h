@@ -38,7 +38,6 @@ public:
 	ApplicationHarness(const ApplicationHarness& other) = delete;
 	ApplicationHarness& operator=(const ApplicationHarness& other) = delete;
 
-
 	void Run();
 
 	void Update(float delta);

@@ -100,6 +100,8 @@ void ApplicationHarness::Run()
 	double currentTime = glfwGetTime();
 	double accumulator = 0.0;
 
+	app->Start();
+
 	while (IsRunning())
 	{
 

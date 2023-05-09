@@ -3,6 +3,7 @@
 #include "Maths.h"
 #include <vector>
 
+
 /// <summary>
 /// The idea is to link up two players to individual controlers with the controllers being 
 /// able to move and change the color of the player they are associated with.
@@ -21,9 +22,11 @@ private:
 	player player1;
 	player player2;
 
+
+
 public:
 
-
+	void Start();
 	void Update(float delta);
 
 	void DrawPlayerCharacter(player target);

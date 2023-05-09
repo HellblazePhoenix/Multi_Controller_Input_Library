@@ -5,7 +5,9 @@
 class Application
 {
 public:
+	virtual void Start() = 0;
 	virtual void Update(float delta) = 0;
+
 
 	bool leftMouseDown;
 	bool rightMouseDown;
