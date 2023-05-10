@@ -59,6 +59,9 @@ whatever the lights on the controllers are referencing.
 
 
 const float * glfwGetJoystickAxes(int jid, int * count)
+I've found that triggers start at -1 and go up to one the more they are indented
+whereas toggles start at 0 and go from 1 to -1 with the Y positive of the toggle being towards the player and the x positive being to the right
+the toggles are also unable to reach -1 Y I believe this is from damage or use but cannot be certain.
 
 
 
