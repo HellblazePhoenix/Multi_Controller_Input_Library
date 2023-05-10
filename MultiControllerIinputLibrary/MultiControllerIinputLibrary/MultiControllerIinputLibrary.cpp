@@ -3,12 +3,11 @@
 
 #include "pch.h"
 #include "framework.h"
-
+/*
 class InputManager
 {
 private:
 	// list of InputDevice Instances and corresponding objects
-	InputDevice
 	// method that creates a thread that infinitely loops to check inputs from the active devices 
 	// and launches events based on those inputs it also checks if the controller is still connected
 	// method to trigger events based on inputs
@@ -44,3 +43,4 @@ void DisConnectDevice(InputDevice disconDevice)
 	// set disconDevice as inactive
 }
 
+*/
