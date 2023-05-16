@@ -3,7 +3,59 @@
 
 #include "pch.h"
 #include "framework.h"
-/*
+
+
+enum class ButtonType
+{
+	AButton = 0,
+	BButton = 1,
+
+};
+
+/// <summary>
+/// An object that handles input from controllers.
+/// </summary>
+class InputManager
+{
+private:
+
+std::vector<bool> ActiveJoysticks;
+std::vector<float*> JoystickAxes;
+std::vector<unsigned char*> Buttons;
+
+
+public:
+
+
+/// <summary>
+/// takes a joystick ID, a button ID and a function pointer then executes that function using the jid and bid.
+/// </summary>
+/// <param name="jid"></param>
+/// <param name="bid"></param>
+/// <param name="execFunc"></param>
+void SetButtonPressCallback(int jid, int bid, std::function<void()> execFunc);	//Should execFunc take deltatime?
+void SetButtonReleaseCallback(int jid, int bid, std::function<void()> execFunc);
+void Button_Held(int jid, int bid, std::function<void()> execFunc);
+
+/// <summary>
+/// executes a function basd on the state of the trigger.
+/// Triggers have an axis which gives a float value
+/// </summary>
+/// <param name="jid"></param>
+/// <param name="aid"></param>
+/// <param name="execFunc"></param>
+void Trigger(int jid, int aid, std::function<void(float axisVal)> execFunc);
+
+int ConnectInputDevice();
+void DisconnectInputDevice(int jid);
+
+void UpdateInputManager();
+};
+/* Plan2
+*/
+
+
+/* Plan1
 class InputManager
 {
 private:

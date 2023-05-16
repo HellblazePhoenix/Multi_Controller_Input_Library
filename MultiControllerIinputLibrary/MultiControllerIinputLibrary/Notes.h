@@ -66,7 +66,9 @@ the toggles are also unable to reach -1 Y I believe this is from damage or use b
 
 
 const unsigned char * glfwGetJoystickButtons(int jid, int * count)
-
+Instead of returning a bool for some reason buttons return either a null terminator character which causes strings to stop
+or an unknown character that gets interpreted as a question mark. I solved this by querying GLFW_PRESS which is GLFW's internal
+value of a pressed button and then outputting a 1 or 0
 
 
 

@@ -10,5 +10,7 @@
 // add headers that you want to pre-compile here
 #include "framework.h"
 #include "glfw3.h"
+#include <functional>
+#include <vector>
 
 #endif //PCH_H
