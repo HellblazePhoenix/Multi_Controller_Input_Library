@@ -92,9 +92,9 @@ void InputManagerDemo::Update(float delta)
 	{
 		const float* Joystick2Arrayptr = glfwGetJoystickAxes(GLFW_JOYSTICK_2, &Joystick2AxesCount);
 		joystick2AxisCount << "Joystick2 Axes " << Joystick2AxesCount; Joystick2AxisCount = joystick2AxisCount.str();
-		joystick2Axis1 << "Left toggle X  " << round(Joystick2Arrayptr[1] * 100) / 100; Joystick2Axis1 = joystick2Axis1.str();
-		joystick2Axis2 << "Left toggle Y  " << round(Joystick2Arrayptr[2] * 100) / 100; Joystick2Axis2 = joystick2Axis2.str();
-		joystick2Axis0 << "Right toggle X " << round(Joystick2Arrayptr[0] * 100) / 100; Joystick2Axis0 = joystick2Axis0.str();
+		joystick2Axis1 << "Left toggle X  " << round(Joystick2Arrayptr[0] * 100) / 100; Joystick2Axis1 = joystick2Axis1.str();
+		joystick2Axis2 << "Left toggle Y  " << round(Joystick2Arrayptr[1] * 100) / 100; Joystick2Axis2 = joystick2Axis2.str();
+		joystick2Axis0 << "Right toggle X " << round(Joystick2Arrayptr[2] * 100) / 100; Joystick2Axis0 = joystick2Axis0.str();
 		joystick2Axis3 << "Right toggle Y " << round(Joystick2Arrayptr[3] * 100) / 100; Joystick2Axis3 = joystick2Axis3.str();
 		joystick2Axis4 << "Left trigger   " << round(Joystick2Arrayptr[4] * 100) / 100; Joystick2Axis4 = joystick2Axis4.str();
 		joystick2Axis5 << "Right trigger  " << round(Joystick2Arrayptr[5] * 100) / 100; Joystick2Axis5 = joystick2Axis5.str();
