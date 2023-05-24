@@ -91,6 +91,7 @@ value of a pressed button and then outputting a 1 or 0
 
 
 /// FINN NOTEPAD STUFF
+////////////////////////////////////
 
 
 Joystick Getting a normalised Vec2 from joysticks, rather than axis shite.
@@ -99,6 +100,8 @@ Get GLFW, read docs on how gamepads work, get multiple controllers
 
 hookup IMGUI, and just poll the gamepad state and debug display it.
 
+
+//////////////////////////////////////////////////////
 
 int main()
 {
@@ -134,6 +137,46 @@ void Jump(int playerNumber)
 
 
 
+
+
+////////////////////////////////
+
+
+
+class Player
+{
+
+	public:
+
+	Vector2 velocity;
+	Vector2 position;
+
+
+	void OnJump()
+	{
+		velocity.y = 5;
+
+	}
+
+
+
+};
+
+
+void DisplayMenu()
+{
+
+}
+
+
+MultiControllerInputLibrary lib;
+
+Player player;
+
+lib.SetButtonPressCallback(0, 3, [&player](){player.OnJump();});
+lib.SetButtonPressCallback(0, 5, DisplayMenu);
+
+////////////////////////////////////////////////////////////////
 
 
 

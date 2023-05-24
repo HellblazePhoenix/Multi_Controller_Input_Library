@@ -48,7 +48,7 @@ void InputManagerDemo::Update(float delta)
 
 
 
-
+	
 
 
 	if (glfwJoystickPresent(GLFW_JOYSTICK_1) == 1)

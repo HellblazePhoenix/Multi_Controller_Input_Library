@@ -31,9 +31,14 @@ ApplicationHarness::ApplicationHarness(Application* appInit) : app(appInit)
 	//Can choose resolution here.
 	window = glfwCreateWindow(1280, 720, "Physics Testbed", nullptr, nullptr);
 
+
+
+
+
 	//This is the somewhat hacky oldschool way of making callbacks work without everything having to be global. Look
 	//at the way the function callbacks work to get an idea of what's going on.
 	glfwSetWindowUserPointer(window, (void*)this);	
+
 
 	//These functions will be able to reference the testbed object via the user pointer.
 	glfwSetWindowSizeCallback(window, WindowResizeCallback);
