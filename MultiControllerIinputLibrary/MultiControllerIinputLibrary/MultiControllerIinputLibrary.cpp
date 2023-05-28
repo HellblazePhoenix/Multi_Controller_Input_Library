@@ -6,9 +6,9 @@
 
 enum class XboxAxesID
 {
-	LeftToggle  =  0,
+	LeftToggleX  =  0,
 	LeftToggleY  =  1,
-	RightToggle =  2,
+	RightToggleX =  2,
 	RightToggleY =  3,
 	LeftTrigger  =  4,
 	RightTrigger =  5
@@ -38,7 +38,6 @@ enum class XboxButtonID
 class InputManager
 {
 private:
-
 
 /// <summary>
 /// A vector that keeps track of the active joystick IDs to prevent errors from occuring due to checking inactive IDs.
@@ -72,43 +71,29 @@ std::vector<unsigned char*> Buttons;
 
 
 public:
-//Should execFunc take deltatime? Or should that be left to the application user of the library? I could also have
-//a delta time variable in the input manager but that could get dicey fast.
+
 
 /// <summary>
-/// takes a joystick ID, a XboxButtonID and a function pointer then executes that function using the jid and XboxButtonID when the button is pressed.
+/// takes a joystick ID, a button ID and a function pointer then executes that function using the jid and bid.
 /// </summary>
 /// <param name="jid"></param>
-/// <param name="bbutton"></param>
+/// <param name="bid"></param>
 /// <param name="execFunc"></param>
-void SetButtonPressCallback(int jid, int button, std::function<void()> execFunc) { if (Buttons[jid][button] == GLFW_PRESS) execFunc();}
+void SetButtonPressCallback(int jid, int bid, std::function<void()> execFunc);	//Should execFunc take deltatime?
+void SetButtonReleaseCallback(int jid, int bid, std::function<void()> execFunc);
+void Button_Held(int jid, int bid, std::function<void()> execFunc);
+
 /// <summary>
-/// takes a joystick ID, a XboxButtonID and a function pointer then executes that function using the jid and XboxButtonID when the button is released.
-
-/// </summary>
-void SetButtonReleaseCallback(int jid, int button, std::function<void()> execFunc) { if (Buttons[jid][button] == GLFW_RELEASE) execFunc(); }
-// Thankfully  glfwGetJoystickButtons() gives back an array where each element in the returned array is either GLFW_PRESS or GLFW_RELEASE
-// meanng I don't have to write custom release code.
-
-// void Button_Held(int jid, int bid, std::function<void()> execFunc); // I think this function should be left to the user to implement a
-// case for in button pressed
-
-/// <summary> 
-/// Takes the joystick ID and then either LeftTrigger or RightTrigger and executes a function that takes a float based on the state of the trigger.
-/// It should be noted that you can use this function to individually querry the axes of the toggles on the controller by replacing the trigger 
-/// parameter with 	LeftToggle for and LeftToggleY for  x or y values of the left toggle writing Right instead of left for the right toggle,
+/// executes a function basd on the state of the trigger.
+/// Triggers have an axis which gives a float value
 /// </summary>
 /// <param name="jid"></param>
-/// <param name="trigger"></param>
+/// <param name="aid"></param>
 /// <param name="execFunc"></param>
-void TriggerPress(int jid, int trigger, std::function<void(float axisVal)> execFunc);
-
-void ToggleInput(int jid, int toggle, std::function<void(float xVal, float yVal)> execFunc);
-
+void Trigger(int jid, int aid, std::function<void(float axisVal)> execFunc);
 
 int ConnectInputDevice();
 void DisconnectInputDevice(int jid);
-
 
 /// <summary>
 /// this should be called in the main loop of an application or game to check for connected controllers.
