@@ -11,6 +11,6 @@
 #include "framework.h"
 #include "glfw3.h"
 #include <functional>
-#include <vector>
+#include <array>
 
 #endif //PCH_H

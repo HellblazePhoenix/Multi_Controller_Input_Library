@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MultiControllerIinputLibrary", "MultiControllerIinputLibrary\MultiControllerIinputLibrary.vcxproj", "{E0D749CC-077D-4CB8-8908-C3EA13F765BA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleFramework", "..\LineRenderer\SimpleFramework\SimpleFramework.vcxproj", "{41626E95-6727-4DC1-8CE6-53BBA63E6C0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E0D749CC-077D-4CB8-8908-C3EA13F765BA} = {E0D749CC-077D-4CB8-8908-C3EA13F765BA}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

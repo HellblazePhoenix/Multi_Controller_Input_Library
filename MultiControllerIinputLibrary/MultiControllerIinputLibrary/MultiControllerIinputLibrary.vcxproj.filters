@@ -24,9 +24,12 @@
     <ClInclude Include="Notes.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MultiControllerInput.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MultiControllerIinputLibrary.cpp">
+    <ClCompile Include="MultiControllerInput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
